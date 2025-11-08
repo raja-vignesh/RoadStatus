@@ -18,7 +18,8 @@ namespace RoadStatus.Services
 
         public async Task<RoadStatusResult> CheckStatus(string roadId)
         {
-            throw new NotImplementedException();
+            var (road, error) = await _apiService.GetRoadStatusAsync(roadId);
+            return new RoadStatusResult { RoadDisplayName = road.DisplayName };
         }
     }
 }
