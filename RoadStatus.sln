@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoadStatus", "RoadStatus\RoadStatus.csproj", "{2C2CABB5-C2F3-426B-8FA9-02BA60DF5D63}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoadStatusTest", "RoadStatusTest\RoadStatusTest.csproj", "{A76106F7-F41A-44E9-8BC6-423C3B0788FA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2C2CABB5-C2F3-426B-8FA9-02BA60DF5D63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C2CABB5-C2F3-426B-8FA9-02BA60DF5D63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C2CABB5-C2F3-426B-8FA9-02BA60DF5D63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C2CABB5-C2F3-426B-8FA9-02BA60DF5D63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A76106F7-F41A-44E9-8BC6-423C3B0788FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A76106F7-F41A-44E9-8BC6-423C3B0788FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A76106F7-F41A-44E9-8BC6-423C3B0788FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A76106F7-F41A-44E9-8BC6-423C3B0788FA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F6418447-DD74-4A07-8EBF-6C46C7C3E80B}
+	EndGlobalSection
+EndGlobal
