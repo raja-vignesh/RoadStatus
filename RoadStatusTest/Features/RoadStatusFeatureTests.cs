@@ -99,9 +99,15 @@ namespace RoadStatusTest.Features
         {
             // Arrange
             var mockApiService = new Mock<ITflApiService>();
-    
+
+            var expectedError = new ApiError
+            {
+                HttpStatusCode = 404,
+                Message = "The following road id is not recognised: A233"
+            };
+
             mockApiService.Setup(x => x.GetRoadStatusAsync("A233"))
-                         .ReturnsAsync((null, "The following road id is not valid: A233"));
+                         .ReturnsAsync((null, expectedError));
 
             var roadStatusChecker = new RoadStatusChecker(mockApiService.Object);
 
