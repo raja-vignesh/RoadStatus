@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using RoadStatus.Models;
 
-namespace RoadStatus.Services
+namespace RoadStatus.Services.ServiceInterfaces
 {
     public interface ITflApiService
     {

@@ -4,8 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using RoadStatus.ApiServices;
+using RoadStatus.Services;
+using RoadStatus.Services.ServiceInterfaces;
 
-namespace RoadStatus.Services
+namespace RoadStatus
 {
     public class RoadStatusChecker
     {
@@ -19,7 +21,7 @@ namespace RoadStatus.Services
         public async Task<RoadStatusResult> CheckStatus(string roadId)
         {
             var (road, error) = await _apiService.GetRoadStatusAsync(roadId);
-            return new RoadStatusResult { RoadDisplayName = road.DisplayName };
+            return new RoadStatusResult { RoadDisplayName = road.DisplayName, RoadStatus = road.StatusSeverity, RoadStatusDescription = road.StatusSeverityDescription };
         }
     }
 }
