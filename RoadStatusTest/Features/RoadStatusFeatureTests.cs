@@ -90,5 +90,28 @@ namespace RoadStatusTest.Features
             Assert.Equal("No Exceptional Delays", result.RoadStatusDescription);
         }
 
+        // Test 4
+        /// Verifies  the RoadStatusChecker correctly identfies
+        /// the error returned 
+
+        [Fact]
+        public async Task GivenInvalidRoadId_WhenGettingRoadStatus_ThenErrorIsReturned()
+        {
+            // Arrange
+            var mockApiService = new Mock<ITflApiService>();
+    
+            mockApiService.Setup(x => x.GetRoadStatusAsync("A233"))
+                         .ReturnsAsync((null, "The following road id is not valid: A233"));
+
+            var roadStatusChecker = new RoadStatusChecker(mockApiService.Object);
+
+            // Act
+            var result = await roadStatusChecker.CheckStatus("A233");
+
+            // Assert
+            Assert.False(result.IsValid);
+            Assert.Equal("A233 is not a valid road", result.ErrorMessage);
+        }
+
     }
 }

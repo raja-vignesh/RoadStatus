@@ -21,7 +21,24 @@ namespace RoadStatus
         public async Task<RoadStatusResult> CheckStatus(string roadId)
         {
             var (road, error) = await _apiService.GetRoadStatusAsync(roadId);
-            return new RoadStatusResult { RoadDisplayName = road.DisplayName, RoadStatus = road.StatusSeverity, RoadStatusDescription = road.StatusSeverityDescription };
+
+            if (error != null)
+            {
+                return new RoadStatusResult
+                {
+                    IsValid = false,
+                    ErrorMessage = $"{roadId} is not a valid road"
+                };
+            }
+
+            return new RoadStatusResult
+            {
+                RoadDisplayName = road.DisplayName,
+                RoadStatus = road.StatusSeverity,
+                RoadStatusDescription = road.StatusSeverityDescription,
+                IsValid = true
+            };
+        
         }
     }
 }
