@@ -9,6 +9,6 @@ namespace RoadStatus.Services.ServiceInterfaces
 {
     public interface ITflApiService
     {
-        public  Task<(RoadCorridor road, ApiError error)> GetRoadStatusAsync(string roadId);
+        public  Task<(RoadCorridor? road, ApiError? error)> GetRoadStatusAsync(string roadId);
     }
 }

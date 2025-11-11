@@ -33,9 +33,9 @@ namespace RoadStatus
 
             return new RoadStatusResult
             {
-                RoadDisplayName = road.DisplayName,
-                RoadStatus = road.StatusSeverity,
-                RoadStatusDescription = road.StatusSeverityDescription,
+                RoadDisplayName = road!.DisplayName,
+                RoadStatus = road!.StatusSeverity,
+                RoadStatusDescription = road!.StatusSeverityDescription,
                 IsValid = true
             };
         

@@ -21,12 +21,13 @@ namespace RoadStatus.ApiServices
         public TflApiService(HttpClient httpClient, IConfiguration configuration)
         {
             _httpClient = httpClient;
-            _appKey = configuration["TflApiSettings:AppKey"];
+            _appKey = configuration["TflApiSettings:AppKey"]!;
+            _httpClient.BaseAddress = new Uri(configuration["TflApiSettings:BaseUrl"]!);
         }
 
         //GetRoadStatusAsync takes a road ID, calls the TfL API, and reads the response.
         //If the response is successful, it returns the road details.If there’s an error, it returns an error object instead.
-        public async Task<(RoadCorridor road, ApiError error)> GetRoadStatusAsync(string roadId)
+        public async Task<(RoadCorridor? road, ApiError? error)> GetRoadStatusAsync(string roadId)
         {
             var url = $"Road/{roadId}?&app_key={_appKey}";
             var response = await _httpClient.GetAsync(url);
