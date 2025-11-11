@@ -9,6 +9,8 @@ using RoadStatus.Services.ServiceInterfaces;
 
 namespace RoadStatus
 {
+    //validates the response and returns either the data
+    //or an error message if the road ID is invalid.
     public class RoadStatusChecker
     {
         private readonly ITflApiService _apiService;

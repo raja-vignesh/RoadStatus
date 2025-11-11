@@ -8,7 +8,8 @@ namespace RoadStatus
 {
     internal class Program
     {
-         static async Task<int> Main(string[] args)
+        //retrieves and displays the status of a specified road by calling the TfL API
+        static async Task<int> Main(string[] args)
            {
                 if (args.Length == 0 || string.IsNullOrWhiteSpace(args[0]))
                 {
