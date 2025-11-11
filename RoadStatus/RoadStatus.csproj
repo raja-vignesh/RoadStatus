@@ -14,5 +14,10 @@
     <PackageReference Include="Microsoft.Extensions.Http" Version="9.0.10" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
   </ItemGroup>
+	<ItemGroup>
+		<None Update="appsettings.json">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
    
 </Project>

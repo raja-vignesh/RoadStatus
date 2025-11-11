@@ -8,10 +8,8 @@ namespace RoadStatus
 {
     internal class Program
     {
-        static void Main(string[] args)
-        {
-            static async Task<int> Main(string[] args)
-            {
+         static async Task<int> Main(string[] args)
+           {
                 if (args.Length == 0 || string.IsNullOrWhiteSpace(args[0]))
                 {
                     Console.WriteLine("Please provide a valid road ID");
@@ -31,8 +29,9 @@ namespace RoadStatus
                     if (result.IsValid)
                     {
                         Console.WriteLine($"The status of the {result.RoadDisplayName} is as follows");
-                        Console.WriteLine($"    Road Status is {result.RoadStatus}");
-                        Console.WriteLine($"    Road Status Description is {result.RoadStatusDescription}");
+                        //Console.WriteLine($"Road Status is {result.RoadStatus}");
+                        Console.WriteLine($"Road Status is {result.RoadStatus}");
+                        Console.WriteLine($"Road Status Description is {result.RoadStatusDescription}");
                         return 0;
                     }
                     else
@@ -59,5 +58,5 @@ namespace RoadStatus
                         services.AddHttpClient<ITflApiService, TflApiService>();
                     });
         }
-    }
+    
 }

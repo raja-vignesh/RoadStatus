@@ -22,6 +22,7 @@ namespace RoadStatus.ApiServices
         {
             _httpClient = httpClient;
             _appKey = configuration["TflApiSettings:AppKey"];
+            _httpClient.BaseAddress = new Uri(configuration["TflApiSettings:BaseUrl"]);
         }
 
         //GetRoadStatusAsync takes a road ID, calls the TfL API, and reads the response.
