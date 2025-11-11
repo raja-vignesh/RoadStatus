@@ -10,24 +10,24 @@ namespace RoadStatus.Models
     public class RoadCorridor
     {
         [JsonProperty("id")]
-        public string Id { get; set; }
+        public string Id { get; set; } = string.Empty;
 
         [JsonProperty("displayName")]
-        public string DisplayName { get; set; }
+        public string DisplayName { get; set; } = string.Empty ;
 
         [JsonProperty("statusSeverity")]
-        public string StatusSeverity { get; set; }
+        public string StatusSeverity { get; set; } = string.Empty;
 
         [JsonProperty("statusSeverityDescription")]
-        public string StatusSeverityDescription { get; set; }
+        public string StatusSeverityDescription { get; set; } = string.Empty;
 
         [JsonProperty("bounds")]
-        public string Bounds { get; set; }
+        public string Bounds { get; set; } = string.Empty;
 
         [JsonProperty("envelope")]
-        public string Envelope { get; set; }
+        public string Envelope { get; set; } = string.Empty;
 
         [JsonProperty("url")]
-        public string Url { get; set; }
+        public string Url { get; set; } = string.Empty;
     }
 }

@@ -10,21 +10,21 @@ namespace RoadStatus.Models
     public class ApiError
     {
         [JsonProperty("timestampUtc")]
-        public string TimestampUtc { get; set; }
+        public string TimestampUtc { get; set; } = string.Empty;
 
         [JsonProperty("exceptionType")]
-        public string ExceptionType { get; set; }
+        public string ExceptionType { get; set; } = string.Empty ;
 
         [JsonProperty("httpStatusCode")]
         public int HttpStatusCode { get; set; }
 
         [JsonProperty("httpStatus")]
-        public string HttpStatus { get; set; }
+        public string HttpStatus { get; set; } = string.Empty;
 
         [JsonProperty("relativeUri")]
-        public string RelativeUri { get; set; }
+        public string RelativeUri { get; set; } = string.Empty;
 
         [JsonProperty("message")]
-        public string Message { get; set; }
+        public string Message { get; set; } = string.Empty;
     }
 }

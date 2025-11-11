@@ -60,7 +60,7 @@ namespace RoadStatusTest.Services
             };
 
             // Use the simpler in-memory configuration approach
-            var inMemorySettings = new Dictionary<string, string> {
+            var inMemorySettings = new Dictionary<string, string?> {
                 {"TflApiSettings:AppKey", "test_key"},
             };
 
@@ -107,7 +107,7 @@ namespace RoadStatusTest.Services
                 BaseAddress = new Uri("https://api.tfl.gov.uk/")
             };
 
-            var inMemorySettings = new Dictionary<string, string> {
+            var inMemorySettings = new Dictionary<string, string?> {
                 {"TflApiSettings:AppKey", "test_key"},
             };
 
