@@ -7,7 +7,7 @@ using Newtonsoft.Json;
 
 namespace RoadStatus.Models
 {
-    public class ApiError
+    public sealed class ApiError
     {
         [JsonProperty("timestampUtc")]
         public string TimestampUtc { get; set; } = string.Empty;

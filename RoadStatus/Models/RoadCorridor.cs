@@ -7,7 +7,7 @@ using Newtonsoft.Json;
 
 namespace RoadStatus.Models
 {
-    public class RoadCorridor
+    public sealed class RoadCorridor
     {
         [JsonProperty("id")]
         public string Id { get; set; } = string.Empty;

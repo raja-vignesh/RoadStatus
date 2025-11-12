@@ -44,7 +44,6 @@ namespace RoadStatus.ApiServices
                 return (null, error);
             }
         }
-
         
     }
 }

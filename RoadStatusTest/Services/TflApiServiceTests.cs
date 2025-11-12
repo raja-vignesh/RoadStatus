@@ -57,11 +57,13 @@ namespace RoadStatusTest.Services
             var httpClient = new HttpClient(handlerMock.Object)
             {
                 BaseAddress = new Uri("https://api.tfl.gov.uk/")
+
             };
 
             // Use the simpler in-memory configuration approach
             var inMemorySettings = new Dictionary<string, string?> {
                 {"TflApiSettings:AppKey", "test_key"},
+                {"TflApiSettings:BaseUrl", "https://api.tfl.gov.uk/"}
             };
 
             Microsoft.Extensions.Configuration.IConfiguration configuration = new ConfigurationBuilder()
@@ -109,6 +111,7 @@ namespace RoadStatusTest.Services
 
             var inMemorySettings = new Dictionary<string, string?> {
                 {"TflApiSettings:AppKey", "test_key"},
+                {"TflApiSettings:BaseUrl", "https://api.tfl.gov.uk/"}
             };
 
             Microsoft.Extensions.Configuration.IConfiguration configuration = new ConfigurationBuilder()
