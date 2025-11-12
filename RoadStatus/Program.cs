@@ -62,7 +62,8 @@ namespace RoadStatus
                 })
                 .ConfigureServices((context, services) =>
                 {
-                    services.AddHttpClient<ITflApiService, TflApiService>();
+                    services.AddHttpClient<ITflApiService, TflApiService>()
+                        .AddStandardResilienceHandler(context.Configuration.GetSection("Resilience:TflApi"));
                 });
     }
 

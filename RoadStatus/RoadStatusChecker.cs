@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Logging;
 using RoadStatus.ApiServices;
 using RoadStatus.Services;
 using RoadStatus.Services.ServiceInterfaces;
@@ -14,7 +15,6 @@ namespace RoadStatus
     public class RoadStatusChecker
     {
         private readonly ITflApiService _apiService;
-
         public RoadStatusChecker(ITflApiService apiService)
         {
             _apiService = apiService;
