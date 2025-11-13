@@ -3,9 +3,10 @@ Building the code:
 
 I have marked the repo as Public so either clone the code or download as a zip file from the master branch.  
 
-.net core 8 SDK is used.  
+.net core 8 SDK is used. 
 
-      - update the appsettings.json with the appkey. now it is blank.
+      - RoadStatus/RoadStatus/appsettings.json 
+      - update the appsettings.json -> Appkey value "" with the appkey you have
 
 ## How to build  
 
