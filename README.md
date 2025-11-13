@@ -9,4 +9,5 @@ I have marked the repo as Public so either clone the code or download as a zip f
 
 ## How to build  
 
-  From the root run,   dotnet build
+  From the root run,  
+      dotnet build
