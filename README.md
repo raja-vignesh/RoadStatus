@@ -4,7 +4,7 @@ Building the code:
 I have marked the repo as Public so either clone the code or download as a zip file from the master branch.
 .net core 8 SDK is used.  
 
-      - update the app settings.json with the appkey. now it is blank.
+      - update the appsettings.json with the appkey. now it is blank.
 
 ## How to build  
 
@@ -25,7 +25,7 @@ I have marked the repo as Public so either clone the code or download as a zip f
 
       - new TfL API DOES NOT require APP_ID hence only APP_KEY is used. THIS INFO IS GIVEN IN THE BLOG
 
-# More info#
+# More info
 
       - TDD and BDD are used
       - separation of concerns
