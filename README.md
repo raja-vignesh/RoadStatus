@@ -20,3 +20,7 @@ I have marked the repo as Public so either clone the code or download as a zip f
 ## How to test
 
       - dotnet test
+
+# Assumptions
+
+    - new TfL API DOES NOT require APP_ID hence only APP_KEY is used.
